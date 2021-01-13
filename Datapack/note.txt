@@ -1,0 +1,16 @@
+This datapack is an OVERLAY pack.
+
+Meaning this does not overwrite MOST of the data SBR keeps.
+
+Data Overwritten:
+reload.mcfunction
+ability_list.mcfunction
+open_menus.mcfunction
+main.mcfunction (data/menu/functions/cheats/get_items/other)
+
+pack.mcmeta
+
+(there might be more but this is what I recall from memory.)
+
+This copy of SBRE is for SBR v1.0 (public release 1).
+DO NOT USE THIS ON ANY OTHER VERSION AS IT WILL MOST LIKELY BREAK SBR!

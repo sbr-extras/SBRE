@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "cheats:get_items/dungeons/implosion",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SkyblockMenu:1b}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "cheats:get_items/dungeons/shadow_warp",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SkyblockMenu:1b}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "cheats:get_items/dungeons/wither_shield",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{SkyblockMenu:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
