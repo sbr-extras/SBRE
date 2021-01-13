@@ -1,7 +1,7 @@
 # Skyblock Remake Extras
 is just like Skyblock Extras (for the real Hypixel Skyblock) but for BlueCommander's remake.
 
-# Credit Given Where is Due
+# Credit Given Where Credit is Due
 The entire Hypixel Skyblock Remake was remade by BlueCommander and his many developers. Do note when playing this that I DID NOT MAKE THE REMAKE. Please subscribe to BlueCommander on YouTube and join his Discord.
 YouTube: https://youtube.com/BlueCommander
 Discord: https://discord.gg/4MgrUApCQn
