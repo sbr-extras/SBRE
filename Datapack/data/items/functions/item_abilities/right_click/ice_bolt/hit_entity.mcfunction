@@ -1,12 +1,9 @@
 effect give @s slowness 5 3 true
-# Calculate Damage
-scoreboard players set $IntValue Temp 500
-scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5] QueueADmg += $IntValue Temp
-scoreboard players operation $IntScale Temp = @s P_Intelligence
-scoreboard players set $IntValue Temp 100
-scoreboard players operation $IntScale Temp /= $IntValue Temp
-# Is =xxx% Magic Damage DMG * xxx%/100? or is it DMG + xxx%/100?
-scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5] QueueADmg *= $IntScale Temp
+# Calculate & Apply Damage
+scoreboard players set $ABCDmg Temp 2000
+scoreboard players set $ABCScl Temp 4
+scoreboard players operation $ABCInt Temp = @p P_Intelligence
 
-# Apply Damage
-scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5] ApplyDamage = @e[tag=!NPC,type=!#stats:show_hp,distance=..5] QueueADmg
+function sbre:ability_damage
+
+scoreboard players operation @s ApplyDamage = $ABCRes Temp

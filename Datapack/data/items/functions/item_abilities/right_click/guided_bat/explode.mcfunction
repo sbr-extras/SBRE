@@ -4,17 +4,14 @@
 #   LINK www.youtube.com/c/BlueCommander   #
 #==========================================#
 #---------------DETECT BLOCK---------------#
-# Calculate Damage
-scoreboard players set $IntValue Temp 2000
-scoreboard players operation @s QueueADmg += $IntValue Temp
-scoreboard players operation $IntScale Temp = $GBPLR Temp
-scoreboard players set $IntValue Temp 100
-scoreboard players operation $IntScale Temp /= $IntValue Temp
-# Is =xxx% Magic Damage DMG * xxx%/100? or is it DMG + xxx%/100?
-scoreboard players operation @s QueueADmg *= $IntScale Temp
+# Calculate & Apply Damage
+scoreboard players set $ABCDmg Temp 2000
+scoreboard players set $ABCScl Temp 4
+scoreboard players operation $ABCInt Temp = @p P_Intelligence
 
-# Apply Damage
-scoreboard players operation @s ApplyDamage = @s QueueADmg
+function sbre:ability_damage
+
+scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5,type=!bat] ApplyDamage = $ABCRes Temp
 
 playsound minecraft:entity.generic.explode master @a[distance=..20]
 particle minecraft:explosion ~ ~ ~ .3 .3 .3 1 20 force

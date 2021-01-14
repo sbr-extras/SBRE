@@ -8,8 +8,11 @@ To Do:
 
 Working on:
 - Ability Damage (on weapons)
-- Fix Coin Bug
+	- Frozen Scythe
+	- Hyperion
+	- 
 
 Done:
 - Wither Impact
 - Intelligence Scaling (the system)
+- Fix Coin Bug

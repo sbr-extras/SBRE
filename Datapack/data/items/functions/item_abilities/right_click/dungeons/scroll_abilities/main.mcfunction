@@ -12,7 +12,6 @@ scoreboard players operation @s[tag=!Ability_FreeSpace] PlayerMana += $ManaCost 
 scoreboard players reset @s I_ActionbarTimer
 function stats:actionbar
 #---------------TELEPORT LOOP--------------#
-# Using Instant Transmission Tele Loop Because Hyperion Teleport Loop Doesn't Work ATM
 execute if entity @s[tag=Ability_FreeSpace] run function items:item_abilities/right_click/dungeons/scroll_abilities/teleport_loop
 execute at @s unless block ~ ~ ~ #skyblock:allowed run tp @s ~ ~1 ~
 #--------------RESET MOMENTUM--------------#
@@ -43,20 +42,19 @@ execute unless score @s Implosion_Timer matches 3
 execute unless score @s Implosion_Timer matches 2
 execute unless score @s Implosion_Timer matches 1
 
-# Calculate Damage
-scoreboard players set $IntValue Temp 100000
-scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5] QueueADmg += $IntValue Temp
-scoreboard players operation $IntScale Temp = @s P_Intelligence
-scoreboard players set $IntValue Temp 100
-scoreboard players operation $IntScale Temp /= $IntValue Temp
-# Is =xxx% Magic Damage DMG * xxx%/100? or is it DMG + xxx%/100?
-scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5] QueueADmg *= $IntScale Temp
+# Calculate & Apply Damage
+scoreboard players set $ABCDmg Temp 10000
+scoreboard players set $ABCScl Temp 30
+scoreboard players operation $ABCInt Temp = @s P_Intelligence
 
-# Apply Damage
-scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..5] ApplyDamage = @e[tag=!NPC,type=!#stats:show_hp,distance=..5] QueueADmg
+function sbre:ability_damage
 
+scoreboard players operation @e[tag=!NPC,type=!#stats:show_hp,distance=..8] ApplyDamage = $ABCRes Temp
+
+# Particle & Noise
 playsound minecraft:entity.generic.explode master @a[distance=..20]
-particle minecraft:explosion ~ ~.3 ~ .3 .33 .3 1 20 force
+particle minecraft:explosion ~ ~ ~ .3 .3 .3 1 20 force
+
 #---------------Wither Shield--------------#
 # Add 30% damage reduce (TODO: Fix Wither Shield)
 #scoreboard players set @s I_OperValue 0.3

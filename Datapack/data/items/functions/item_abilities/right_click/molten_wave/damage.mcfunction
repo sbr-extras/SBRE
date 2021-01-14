@@ -1,11 +1,8 @@
-# Calculate Damage
-scoreboard players set $IntValue Temp 16000
-scoreboard players operation @s QueueADmg += $IntValue Temp
-scoreboard players operation $IntScale Temp = $MWPLR Temp
-scoreboard players set $IntValue Temp 100
-scoreboard players operation $IntScale Temp /= $IntValue Temp
-# Is =xxx% Magic Damage DMG * xxx%/100? or is it DMG + xxx%/100?
-scoreboard players operation @s QueueADmg *= $IntScale Temp
+# Calculate & Apply Damage
+scoreboard players set $ABCDmg Temp 16000
+scoreboard players set $ABCScl Temp 48
+scoreboard players operation $ABCInt Temp = $MWPLR Temp
 
-# Apply Damage
-scoreboard players operation @s ApplyDamage = @s QueueADmg
+function sbre:ability_damage
+
+scoreboard players operation @s ApplyDamage = $ABCRes Temp
