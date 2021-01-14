@@ -1,9 +1,15 @@
+To Do:
+- Necron's Blade (crafting)
+- Fix Wither Shield (on Wither Impact)'s 30% dmg reduction
+- Necron's Scrolls
+- Implosion
+- Shadow Warp
+- No Attack Speed
+
 Working on:
-- Scroll Abilities
+- Ability Damage (on weapons)
+- Fix Coin Bug
 
 Done:
-
-
-To Do:
-- Necron's Blade
-- Necron's Scrolls
+- Wither Impact
+- Intelligence Scaling (the system)

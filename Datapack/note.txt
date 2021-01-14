@@ -4,6 +4,8 @@ Meaning this does not overwrite MOST of the data SBR keeps.
 
 Data Overwritten:
 reload.mcfunction
+tick.mcfunction
+player_join.mcfunction (forgot the exact name but its with tick & reload)
 ability_list.mcfunction
 open_menus.mcfunction
 main.mcfunction (data/menu/functions/cheats/get_items/other)

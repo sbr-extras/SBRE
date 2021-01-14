@@ -13,8 +13,6 @@ execute if data storage blue:item ItemAbility[{Name:"Showtime"}] run function it
 execute if data storage blue:item ItemAbility[{Name:"Guided Bat"}] run function items:item_abilities/right_click/guided_bat/main
 execute if data storage blue:item ItemAbility[{Name:"Ice Bolt"}] run function items:item_abilities/right_click/ice_bolt/main
 
-
-
 execute if data storage blue:item ItemAbility[{Name:"Instant Heal"}] unless data storage blue:item {ItemData:{Base:{BaseDamage:110}}} unless data storage blue:item {ItemData:{Base:{BaseDamage:150}}} run function items:item_abilities/right_click/instant_heal/zombie_sword/check_charges
 execute if data storage blue:item ItemAbility[{Name:"Instant Heal"}] if data storage blue:item {ItemData:{Base:{BaseDamage:110}}} run function items:item_abilities/right_click/instant_heal/ornate_zombie_sword/check_charges
 execute if data storage blue:item ItemAbility[{Name:"Instant Heal"}] if data storage blue:item {ItemData:{Base:{BaseDamage:150}}} run function items:item_abilities/right_click/instant_heal/florid_zombie_sword/check_charges
@@ -28,7 +26,7 @@ execute if data storage blue:item ItemAbility[{Name:"Molten Wave"}] run function
 
 #-------------SCROLL ABILITIES-------------#
 
-execute if data storage blue:item ItemAbility[{Name:"Wither Impact"}] run function items:item_abilities/right_click/dungeons/scroll_abilities/wither_impact
+execute if data storage blue:item ItemAbility[{Name:"Wither Impact"}] run function items:item_abilities/right_click/dungeons/scroll_abilities/main
 #execute if data storage blue:item ItemAbility[{Name:"Implosion"}] run function items:item_abilities/right_click/dungeons/scroll_abilities/
 #execute if data storage blue:item ItemAbility[{Name:"Wither Shield"}] run function items:item_abilities/right_click/dungeons/scroll_abilities/
 #execute if data storage blue:item ItemAbility[{Name:"Shadow Warp"}] run function items:item_abilities/right_click/dungeons/scroll_abilities/
